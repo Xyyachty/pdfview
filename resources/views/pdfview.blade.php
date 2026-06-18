@@ -25,7 +25,7 @@
             @forelse ($items as $key => $item)
                 <tr>
                     <td>{{ ++$key }}</td>
-                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->name }}</td>  
                     <td>{{ $item->email }}</td>
                 </tr>
             @empty

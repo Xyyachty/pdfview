@@ -27,4 +27,29 @@ class ItemController extends Controller
 
         return view('pdfview', compact('items', 'error'));
     }
+
+    public function flashMessage()
+    {
+        return view('flash-demo');
+    }
+
+    public function testSuccess()
+    {
+        return redirect()->route('flash-message')->with('success', 'Success! This is a success message.');
+    }
+
+    public function testError()
+    {
+        return redirect()->route('flash-message')->with('error', 'Error! Something went wrong.');
+    }
+
+    public function testWarning()
+    {
+        return redirect()->route('flash-message')->with('warning', 'Warning! Please be careful.');
+    }
+
+    public function testInfo()
+    {
+        return redirect()->route('flash-message')->with('info', 'Info! Here is some information.');
+    }
 }
